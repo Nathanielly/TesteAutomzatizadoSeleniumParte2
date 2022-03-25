@@ -19,6 +19,7 @@ namespace Alura.LeilaoOnline.Selenium.PageObjects
         private By byInputImagem;
         private By byInputInicioPregao;
         private By byInputTerminoPregao;
+        private By byBotaoSalvar;
 
 
         public NovoLeilaoPO(IWebDriver driver)
@@ -33,6 +34,7 @@ namespace Alura.LeilaoOnline.Selenium.PageObjects
             byInputImagem = By.Id("ArquivoImagem");
             byInputInicioPregao = By.Id("InicioPregao");
             byInputTerminoPregao = By.Id("TerminoPregao");
+            byBotaoSalvar = By.CssSelector("button[type=submit]");
 
            
         }
@@ -56,7 +58,11 @@ namespace Alura.LeilaoOnline.Selenium.PageObjects
 
            
         }
+        public void SubmeterFormulario()
+        {
+            driver.FindElement(byBotaoSalvar).Click();
 
+        }
 
     }
 }

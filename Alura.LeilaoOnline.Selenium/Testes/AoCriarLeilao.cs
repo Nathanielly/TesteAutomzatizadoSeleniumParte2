@@ -42,10 +42,12 @@ namespace Alura.LeilaoOnline.Selenium.Testes
             Thread.Sleep(1000);
 
             //act
-
+            novoLeilaoPO.SubmeterFormulario();
 
             //assert
+            Assert.Contains("Leilões cadastrados no sistema", driver.PageSource);
 
+            Thread.Sleep(1000);
         }
 
 
