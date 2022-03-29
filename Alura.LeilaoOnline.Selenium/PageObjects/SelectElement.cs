@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using System;
+using System.Collections.Generic;
 
 namespace Alura.LeilaoOnline.Selenium.PageObjects
 {
@@ -11,6 +12,8 @@ namespace Alura.LeilaoOnline.Selenium.PageObjects
         {
             this.selectElement = selectElement;
         }
+
+        public IEnumerable<object> Options { get; internal set; }
 
         internal void SelectByText(string v)
         {

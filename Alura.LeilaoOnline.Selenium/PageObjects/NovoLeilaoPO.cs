@@ -3,6 +3,8 @@ using System;
 using System.Threading;
 using Xunit;
 using OpenQA.Selenium.Support.UI;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Alura.LeilaoOnline.Selenium.PageObjects
 {
@@ -21,6 +23,7 @@ namespace Alura.LeilaoOnline.Selenium.PageObjects
         private By byInputTerminoPregao;
         private By byBotaoSalvar;
 
+        public object Categorias { get; internal set; }
 
         public NovoLeilaoPO(IWebDriver driver)
         {
@@ -38,6 +41,25 @@ namespace Alura.LeilaoOnline.Selenium.PageObjects
 
            
         }
+
+        //public IEnumerable<string> Categorias
+        //{
+
+        //    get
+        //    {
+        //        var elementoCategoria = new SelectElement(driver.FindElement(byInputCategoria));
+
+                
+                
+        //        return elementoCategoria.Options
+        //            .Where(o => o.Enabled)
+        //            .Select(o => o.Text);
+
+        //    }
+
+
+
+        //}
 
         public void Visitar()
         {

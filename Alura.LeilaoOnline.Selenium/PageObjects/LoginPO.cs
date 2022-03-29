@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using System;
 
 namespace Alura.LeilaoOnline.Selenium.PageObjects
 {
@@ -27,6 +28,11 @@ namespace Alura.LeilaoOnline.Selenium.PageObjects
             driver.FindElement(byInputLogin).SendKeys(login);
             driver.FindElement(byInputSenha).SendKeys(senha);
         }
+
+        //internal void PreencheFormulario()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         public void SubmeteFormulario()
         {
